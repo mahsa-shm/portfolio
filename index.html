@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar System</title>
+    <link rel="stylesheet" href="SolarSystem.css" />
+
+    <!-- --------------------------------------------- -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-latest.min.js"
+    ></script>
+    <!-- <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script> -->
+    <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+    <!-- --------------------------------------------- -->
+    <!-- jQuery -->
+    $(function () {
+  $(".dropDownBtn button").mouseenter(function () {
+    $("#menuImg").css("display", "none");
+    $("#menuImg-hover").css("display", "block");
+  });
+  $(".dropDownBtn button").mouseleave(function () {
+    $("#menuImg").css("display", "block");
+    $("#menuImg-hover").css("display", "none");
+  });
+  $(".dropDownBtn button").click(function () {
+    $("#menuImg").hide();
+    $("#menuImg-hover").show();
+    $(".dropDownContent").toggle();
+  });
+  $(".solar-title").click(function () {
+    $(".solar-planets").toggle();
+  });
+  // $(".sec-1,.sec-2,.sec-3").click(function () {
+  //   $(".hidden-sec").show();
+
+  // });
+  $(".sun img ,.sun h2").click(function () {
+    $(".sun .planet-moreInfo").toggle();
+  });
+
+  $(".Mercury img , .Mercury h2").click(function () {
+    $(".Mercury .planet-moreInfo").toggle();
+  });
+  $(".Venus img , .Venus h2").click(function () {
+    $(".Venus .planet-moreInfo").toggle();
+  });
+  $(".Earth img , .Earth h2").click(function () {
+    $(".Earth .planet-moreInfo").toggle();
+  });
+  $(".Mars img , .Mars h2").click(function () {
+    $(".Mars .planet-moreInfo").toggle();
+  });
+  $(".Jupiter img , .Jupiter h2").click(function () {
+    $(".Jupiter .planet-moreInfo").toggle();
+  });
+  $(".Saturn img , .Saturn h2").click(function () {
+    $(".Saturn .planet-moreInfo").toggle();
+  });
+  $(".Uranus img , .Uranus h2").click(function () {
+    $(".Uranus .planet-moreInfo").toggle();
+  });
+  $(".Neptune img , .Neptune h2").click(function () {
+    $(".Neptune .planet-moreInfo").toggle();
+  });
+  //  ------------------
+  // weather app
+  $("#weather-exBtn").click(function () {
+    $(".weather-info").css("display", "none");
+    $(".search").css("display", "flex");
+  });
+  // $("#weather-input").keypress(function (e) {
+  //   let key = e.which;
+  //   if (key == 13) {
+  //     $(".search").css("display", "none");
+  //     $(".weather-info").css("display", "flex");
+
+  //   }
+  // });
+
+  // to do list
+  $(".toDo-main-div").click(function () {
+    $(".to-do-list .div-1").css("display", "none");
+    $(".to-do-list .div-2").css("display", "none");
+    $(".to-do-list .div-3").css("display", "block");
+  });
+  $("#toDo-exBtn").click(function () {
+    $(".to-do-list .div-3").css("display", "none");
+    $(".to-do-list .div-2").css("display", "block");
+    $(".to-do-list .div-1").css("display", "flex");
+  });
+});
+  </head>
+
+  <body>
+    <!--------------------------------------------------------------------------------->
+
+    <div class="dropDownBtn">
+      <button>
+        <img id="menuImg" src="icons8-menu-70.png" alt="" />
+        <img id="menuImg-hover" src="icons8-menu-70-2.png" alt="" />
+      </button>
+      <div class="dropDownContent">
+        <div>
+          <a href="#gallery"
+            ><img src="icons8-gallery-100.png" alt="" />
+            <p>Solar Gallery</p></a
+          >
+        </div>
+        <div>
+          <a href="#solar-title-h1"
+            ><img src="icons8-solar-system-white.png" alt="" />
+            <p>Solar System</p></a
+          >
+        </div>
+        <div>
+          <a href="#tools-h1"
+            ><img src="icons8-apps-96.png" alt="" />
+            <p>tools</p></a
+          >
+        </div>
+        <div>
+          <a href="#myReputation"
+            ><img src="icons8-contact-100.png" alt="" />
+            <p>contact</p></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <div class="header-sec">
+        <h1>Solar System</h1>
+        <div class="solar-pic">
+          <img src="solar-system-animation-cute.png" alt="" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- gallery fot planet pics -->
+      <div id="gallery" class="gallery">
+        <div class="slideShow">
+          <!-- Full-width images with number and caption text -->
+          <div class="slide fade">
+            <img id="gallery-img" src="Earth_img.jpg" />
+          </div>
+          <div class="slide fade">
+            <img id="gallery-img" src="Sun3-img.jpg" />
+          </div>
+          <div class="slide fade">
+            <img id="gallery-img" src="saturn2-img.jpg" />
+          </div>
+          <div class="slide fade">
+            <img id="gallery-img" src="Uranus-img.jpg" />
+          </div>
+          <div class="slide fade">
+            <img id="gallery-img" src="Venus-img.png" />
+          </div>
+          <div class="slide fade">
+            <img id="gallery-img" src="Jupiter-img.png" />
+            <div class="text">Caption Two</div>
+          </div>
+
+          <div class="slide fade">
+            <img id="gallery-img" src="Neptun2-img.jpg" />
+            <div class="text">Caption Three</div>
+          </div>
+          <div class="slide fade">
+            <img id="gallery-img" src="Mars-img.png" />
+            <div class="text">Caption Three</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+      </div>
+
+      <br />
+
+      <!-- planet section --------------------------------------------- -->
+      <div id="solar-system-sec" class="solar-system-sec">
+        <div class="solar-title">
+          <img
+            id="title-icon"
+            class="col-d-1"
+            src="icons8-galaxy-100.png"
+            alt=""
+          />
+          <h1 id="solar-title-h1" class="shortline">Our Solar System</h1>
+          <p class="little-intro">
+            Our solar system is made up of a star—the Sun—eight planets, 146
+            moons, a bunch of comets, asteroids and space rocks, ice, and
+            several dwarf planets, such as Pluto. The eight planets are Mercury,
+            Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. Mercury is
+            closest to the Sun.
+          </p>
+        </div>
+
+        <div class="solar-planets">
+          <!-- ********************************************* -->
+          <div class="sun planet col-d-12">
+            <img class="col-d-1" src="icons8-bright-100.png" alt="" />
+            <h2>Sun</h2>
+            <p>
+              lorem100 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus nobis ullam iure rerum explicabo modi, fugiat nisi
+              veritatis itaque architecto.
+            </p>
+            <div class="planet-moreInfo">
+              <div class="sec-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, iure quas, error recusandae cupiditate repudiandae
+                aliquid, harum accusantium repellat nostrum minus aperiam quidem
+                iusto officiis ullam adipisci maxime quod enim.
+              </div>
+              <div class="sec-2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                a natus deserunt doloremque fugit sunt harum magni quasi unde
+                exercitationem libero, quidem aspernatur, impedit vitae? Itaque
+                accusamus temporibus unde necessitatibus.
+              </div>
+              <div class="sec-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo eos sapiente odit aut! Aspernatur culpa qui asperiores
+                a, neque rem sit temporibus voluptates alias facere? Velit rem
+                provident reprehenderit sint!
+              </div>
+            </div>
+          </div>
+
+          <!-- ************************************************* -->
+          <div class="Mercury planet col-d-12">
+            <img class="col-d-1" src="icons8-mercury-100.png" alt="" />
+            <h2>Mercury</h2>
+            <p>
+              lorem100 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus nobis ullam iure rerum explicabo modi, fugiat nisi
+              veritatis itaque architecto.
+            </p>
+            <div class="planet-moreInfo">
+              <div class="sec-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, iure quas, error recusandae cupiditate repudiandae
+                aliquid, harum accusantium repellat nostrum minus aperiam quidem
+                iusto officiis ullam adipisci maxime quod enim.
+              </div>
+              <div class="sec-2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                a natus deserunt doloremque fugit sunt harum magni quasi unde
+                exercitationem libero, quidem aspernatur, impedit vitae? Itaque
+                accusamus temporibus unde necessitatibus.
+              </div>
+              <div class="sec-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo eos sapiente odit aut! Aspernatur culpa qui asperiores
+                a, neque rem sit temporibus voluptates alias facere? Velit rem
+                provident reprehenderit sint!
+              </div>
+            </div>
+          </div>
+
+          <div class="planet Venus col-d-12">
+            <img class="col-d-1" src="icons8-planet-100 (3).png" alt="" />
+            <h2>Venus</h2>
+            <p>
+              lorem100 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus nobis ullam iure rerum explicabo modi, fugiat nisi
+              veritatis itaque architecto.
+            </p>
+            <div class="planet-moreInfo">
+              <div class="sec-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, iure quas, error recusandae cupiditate repudiandae
+                aliquid, harum accusantium repellat nostrum minus aperiam quidem
+                iusto officiis ullam adipisci maxime quod enim.
+              </div>
+              <div class="sec-2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                a natus deserunt doloremque fugit sunt harum magni quasi unde
+                exercitationem libero, quidem aspernatur, impedit vitae? Itaque
+                accusamus temporibus unde necessitatibus.
+              </div>
+              <div class="sec-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo eos sapiente odit aut! Aspernatur culpa qui asperiores
+                a, neque rem sit temporibus voluptates alias facere? Velit rem
+                provident reprehenderit sint!
+              </div>
+            </div>
+          </div>
+          <div class="planet Earth col-d-12">
+            <img class="col-d-1" src="icons8-earth-100.png" alt="" />
+            <h2>Earth</h2>
+            <p>
+              lorem100 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus nobis ullam iure rerum explicabo modi, fugiat nisi
+              veritatis itaque architecto.
+            </p>
+            <div class="planet-moreInfo">
+              <div class="sec-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, iure quas, error recusandae cupiditate repudiandae
+                aliquid, harum accusantium repellat nostrum minus aperiam quidem
+                iusto officiis ullam adipisci maxime quod enim.
+              </div>
+              <div class="sec-2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                a natus deserunt doloremque fugit sunt harum magni quasi unde
+                exercitationem libero, quidem aspernatur, impedit vitae? Itaque
+                accusamus temporibus unde necessitatibus.
+              </div>
+              <div class="sec-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo eos sapiente odit aut! Aspernatur culpa qui asperiores
+                a, neque rem sit temporibus voluptates alias facere? Velit rem
+                provident reprehenderit sint!
+              </div>
+            </div>
+          </div>
+          <div class="planet Mars col-d-12">
+            <img class="col-d-1" src="icons8-mars-100.png" alt="" />
+            <h2>Mars</h2>
+            <p>
+              lorem100 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus nobis ullam iure rerum explicabo modi, fugiat nisi
+              veritatis itaque architecto.
+            </p>
+            <div class="planet-moreInfo">
+              <div class="sec-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, iure quas, error recusandae cupiditate repudiandae
+                aliquid, harum accusantium repellat nostrum minus aperiam quidem
+                iusto officiis ullam adipisci maxime quod enim.
+              </div>
+              <div class="sec-2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                a natus deserunt doloremque fugit sunt harum magni quasi unde
+                exercitationem libero, quidem aspernatur, impedit vitae? Itaque
+                accusamus temporibus unde necessitatibus.
+              </div>
+              <div class="sec-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo eos sapiente odit aut! Aspernatur culpa qui asperiores
+                a, neque rem sit temporibus voluptates alias facere? Velit rem
+                provident reprehenderit sint!
+              </div>
+            </div>
+          </div>
+          <div class="planet Jupiter col-d-12">
+            <img class="col-d-1" src="icons8-jupiter-100.png" alt="" />
+            <h2>Jupiter</h2>
+            <p>
+              lorem100 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus nobis ullam iure rerum explicabo modi, fugiat nisi
+              veritatis itaque architecto.
+            </p>
+            <div class="planet-moreInfo">
+              <div class="sec-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, iure quas, error recusandae cupiditate repudiandae
+                aliquid, harum accusantium repellat nostrum minus aperiam quidem
+                iusto officiis ullam adipisci maxime quod enim.
+              </div>
+              <div class="sec-2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                a natus deserunt doloremque fugit sunt harum magni quasi unde
+                exercitationem libero, quidem aspernatur, impedit vitae? Itaque
+                accusamus temporibus unde necessitatibus.
+              </div>
+              <div class="sec-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo eos sapiente odit aut! Aspernatur culpa qui asperiores
+                a, neque rem sit temporibus voluptates alias facere? Velit rem
+                provident reprehenderit sint!
+              </div>
+            </div>
+          </div>
+          <div class="planet Saturn col-d-12">
+            <img class="col-d-1" src="icons8-planet-100 (2).png" alt="" />
+            <h2>Saturn</h2>
+            <p>
+              lorem100 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus nobis ullam iure rerum explicabo modi, fugiat nisi
+              veritatis itaque architecto.
+            </p>
+            <div class="planet-moreInfo">
+              <div class="sec-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, iure quas, error recusandae cupiditate repudiandae
+                aliquid, harum accusantium repellat nostrum minus aperiam quidem
+                iusto officiis ullam adipisci maxime quod enim.
+              </div>
+              <div class="sec-2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                a natus deserunt doloremque fugit sunt harum magni quasi unde
+                exercitationem libero, quidem aspernatur, impedit vitae? Itaque
+                accusamus temporibus unde necessitatibus.
+              </div>
+              <div class="sec-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo eos sapiente odit aut! Aspernatur culpa qui asperiores
+                a, neque rem sit temporibus voluptates alias facere? Velit rem
+                provident reprehenderit sint!
+              </div>
+            </div>
+          </div>
+          <div class="planet Uranus col-d-12">
+            <img class="col-d-1" src="icons8-planet-100 (1).png" alt="" />
+            <h2>Uranus</h2>
+            <p>
+              lorem100 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus nobis ullam iure rerum explicabo modi, fugiat nisi
+              veritatis itaque architecto.
+            </p>
+            <div class="planet-moreInfo">
+              <div class="sec-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, iure quas, error recusandae cupiditate repudiandae
+                aliquid, harum accusantium repellat nostrum minus aperiam quidem
+                iusto officiis ullam adipisci maxime quod enim.
+              </div>
+              <div class="sec-2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                a natus deserunt doloremque fugit sunt harum magni quasi unde
+                exercitationem libero, quidem aspernatur, impedit vitae? Itaque
+                accusamus temporibus unde necessitatibus.
+              </div>
+              <div class="sec-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo eos sapiente odit aut! Aspernatur culpa qui asperiores
+                a, neque rem sit temporibus voluptates alias facere? Velit rem
+                provident reprehenderit sint!
+              </div>
+            </div>
+          </div>
+          <div class="planet Neptune col-d-12">
+            <img class="col-d-1" src="icons8-neptune-100.png" alt="" />
+            <h2>Neptune</h2>
+            <p>
+              lorem100 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus nobis ullam iure rerum explicabo modi, fugiat nisi
+              veritatis itaque architecto.
+            </p>
+
+            <div class="planet-moreInfo">
+              <div class="sec-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, iure quas, error recusandae cupiditate repudiandae
+                aliquid, harum accusantium repellat nostrum minus aperiam quidem
+                iusto officiis ullam adipisci maxime quod enim.
+              </div>
+              <div class="sec-2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+                a natus deserunt doloremque fugit sunt harum magni quasi unde
+                exercitationem libero, quidem aspernatur, impedit vitae? Itaque
+                accusamus temporibus unde necessitatibus.
+              </div>
+              <div class="sec-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo eos sapiente odit aut! Aspernatur culpa qui asperiores
+                a, neque rem sit temporibus voluptates alias facere? Velit rem
+                provident reprehenderit sint!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+      <br />
+      <!-- ----------------------------------------------- -->
+      <div class="tools-main-sec">
+        <h1 id="tools-h1" class="shortline">Tools</h1>
+
+        <div class="tools">
+          <!-- weather -->
+          <div class="weather">
+            <div class="search">
+              <img
+                class="main-weather-icon"
+                src="icons8-weather-200.png"
+                alt=""
+              />
+              <div class="search-input">
+                <h2>Weather App</h2>
+                <label for="weather-input">City Name</label>
+                <input id="weather-input" name="weather-input" type="text" />
+                <button id="weather-btn">
+                  <img src="icons8-search-32.png" alt="" />
+                </button>
+              </div>
+            </div>
+            <div id="invalid-city">Invalid City</div>
+
+            <button id="weather-exBtn">&#x2718;</button>
+            <div class="weather-info">
+              <div class="main-temp">
+                <img id="main-icon" src="icons8-sun-weather.png" alt="" />
+
+                <span>
+                  <h2 id="weather-mainTemp"></h2>
+                  <h3 id="weather-city"></h3>
+                </span>
+              </div>
+              <div class="additional-temp">
+                <div>
+                  Feels Like :
+                  <h3 class="feels">70%</h3>
+                </div>
+                <div>
+                  Humidity :
+                  <h3 class="humidity">40%</h3>
+                </div>
+                <div><h3 class="sky"></h3></div>
+              </div>
+            </div>
+          </div>
+          <!-- calculator -->
+          <div class="calculator">
+            <div class="div-1">
+              <img src="icons8-calculator-200.png" alt="" />
+            </div>
+            <div class="div-2">
+              <h2>Calculator</h2>
+              <div class="cal-main-div">
+                <input id="cal-input" type="text" />
+                <div class="cal-row">
+                  <button onclick="calInput.value+= '1'" class="cal-key">
+                    1
+                  </button>
+                  <button onclick="calInput.value+= '2'" class="cal-key">
+                    2
+                  </button>
+                  <button onclick="calInput.value+= '3'" class="cal-key">
+                    3
+                  </button>
+                  <button
+                    onclick="calInput.value ='' "
+                    class="cal-key operator"
+                  >
+                    AC
+                  </button>
+                  <button
+                    onclick="calInput.value = calInput.value.toString().slice(0, -1)"
+                    class="cal-key operator"
+                  >
+                    DC
+                  </button>
+                </div>
+                <div class="cal-row">
+                  <button onclick="calInput.value+= '4'" class="cal-key">
+                    4
+                  </button>
+                  <button onclick="calInput.value+= '5'" class="cal-key">
+                    5
+                  </button>
+                  <button onclick="calInput.value+= '6'" class="cal-key">
+                    6
+                  </button>
+                  <button
+                    onclick="calInput.value+= '+'"
+                    class="cal-key operator"
+                  >
+                    +
+                  </button>
+                  <button
+                    onclick="calInput.value+= '-'"
+                    class="cal-key operator"
+                  >
+                    -
+                  </button>
+                </div>
+                <div class="cal-row">
+                  <button onclick="calInput.value+= '7'" class="cal-key">
+                    7
+                  </button>
+                  <button onclick="calInput.value+= '8'" class="cal-key">
+                    8
+                  </button>
+                  <button onclick="calInput.value+= '9'" class="cal-key">
+                    9
+                  </button>
+                  <button onclick="calInput.value+= '0'" class="cal-key">
+                    0
+                  </button>
+                  <button
+                    onclick="calInput.value = eval(calInput.value)"
+                    id="equal"
+                    class="cal-key operator"
+                  >
+                    =
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- to do list -->
+          <div class="to-do-list">
+            <div class="div-1">
+              <img src="icons8-notes-200.png" alt="" />
+            </div>
+            <div class="div-2">
+              <h2>To Do List</h2>
+              <div class="toDo-main-div">
+                <div class="toDo-search">
+                  <input type="text" name="" id="toDo-input" />
+                  <button id="toDo-btn">
+                    <img src="icons8-search-32.png" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="div-3">
+              <button id="toDo-exBtn">&#x2718;</button>
+
+              <div class="toDo-search">
+                <input class="toDo-input" type="text" name="" id="toDo-input" />
+                <button id="toDo-btn" onclick="addTask()">
+                  <img src="icons8-search-32.png" alt="" />
+                </button>
+              </div>
+
+              <ul class="toDo-ul"></ul>
+            </div>
+          </div>
+          <!-- game -->
+          <div class="game">
+            <img src="icons8-TicTacToe-200.png" alt="" />
+            <div class="tic-tac" id="tic-tac">
+              <div class="section" data-sec></div>
+              <div class="section" data-sec></div>
+              <div class="section" data-sec></div>
+              <div class="section" data-sec></div>
+              <div class="section" data-sec></div>
+              <div class="section" data-sec></div>
+              <div class="section" data-sec></div>
+              <div class="section" data-sec></div>
+              <div class="section" data-sec></div>
+              <div class="winning-message" id="winning-message">
+                <div data-winning-message>x wins!</div>
+                <button id="restart-btn">restart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <!-- ------------------------- -->
+      <div class="skils">
+        <h1 class="shortline">My Skils</h1>
+        <label class="skils-lable" for="html">HTML</label>
+        <progress class="skils-progress" id="html" value="85" max="100">
+          85%
+        </progress>
+        <label class="skils-lable" for="css">Css</label>
+        <progress class="skils-progress" id="css" value="75" max="100">
+          75%
+        </progress>
+        <label class="skils-lable" for="javaScript">javaScript</label>
+        <progress class="skils-progress" id="javaScript" value="60" max="100">
+          60%
+        </progress>
+        <label class="skils-lable" for="jquery">jQuery</label>
+        <progress class="skils-progress" id="jquery" value="80" max="100">
+          80%
+        </progress>
+        <label class="skils-lable" for="git">Git</label>
+        <progress class="skils-progress" id="git" value="60" max="100">
+          60%
+        </progress>
+        <label class="skils-lable" for="react">React</label>
+        <progress class="skils-progress" id="react" value="40" max="100">
+          40%
+        </progress>
+      </div>
+      <br /><br /><br />
+
+      <!----------------------------------------------------------------------->
+      <div id="myReputation" class="myReputation">
+        <h1 class="shortline">My Info</h1>
+        <div class="reputation-container">
+          <img
+            class="reputation-image"
+            src="icons8-instagram-100 (1).png"
+            alt=""
+          />
+          <p class="reputation-text">@mahsa464</p>
+          <img class="reputation-image" src="icons8-telegram-100.png" alt="" />
+          <p class="reputation-text">@MSH4442</p>
+          <img class="reputation-image" src="icons8-email-100.png" alt="" />
+          <p class="reputation-text">shmahsa464@gmail.com</p>
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <!-- ------------------------------------------- -->
+      <!-- <div id="my-name" class="my-name">
+          
+          <h1 class="shortline">Additional Info</h1>
+          <p></p>
+          <br /><br />
+        </div> -->
+    </main>
+    <footer></footer>
+    <script src="SolarSystem.js"></script>
+  </body>
+</html>
