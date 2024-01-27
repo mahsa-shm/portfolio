@@ -15,7 +15,8 @@
     
     <!-- --------------------------------------------- -->
     <!-- jQuery -->
-    $(function () {
+    <script>
+       $(function () {
   $(".dropDownBtn button").mouseenter(function () {
     $("#menuImg").css("display", "none");
     $("#menuImg-hover").css("display", "block");
@@ -32,10 +33,6 @@
   $(".solar-title").click(function () {
     $(".solar-planets").toggle();
   });
-  // $(".sec-1,.sec-2,.sec-3").click(function () {
-  //   $(".hidden-sec").show();
-
-  // });
   $(".sun img ,.sun h2").click(function () {
     $(".sun .planet-moreInfo").toggle();
   });
@@ -70,15 +67,6 @@
     $(".weather-info").css("display", "none");
     $(".search").css("display", "flex");
   });
-  // $("#weather-input").keypress(function (e) {
-  //   let key = e.which;
-  //   if (key == 13) {
-  //     $(".search").css("display", "none");
-  //     $(".weather-info").css("display", "flex");
-
-  //   }
-  // });
-
   // to do list
   $(".toDo-main-div").click(function () {
     $(".to-do-list .div-1").css("display", "none");
@@ -91,6 +79,8 @@
     $(".to-do-list .div-1").css("display", "flex");
   });
 });
+    </script>
+   
   </head>
 
   <body>
