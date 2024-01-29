@@ -632,6 +632,14 @@ progress::-webkit-progress-bar {
   color: #eee;
   font-size: 20px;
 }
+.reputation-text a {
+  text-decoration: none;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.reputation-text a:visited {
+  color: var(--hotOrange);
+}
 
 
 @keyframes fadeIN {
