@@ -112,6 +112,10 @@ weatherBox.addEventListener("keydown", function (e) {
   }
 });
 // ----------------------------
+// calculator
+const calInput = document.querySelector("#cal-input");
+const calBtn = document.querySelector("#cal-key");
+// ----------------------------
 // to Do List
 const toDoInput = document.querySelector(".toDo-input");
 const toDoUl = document.querySelector(".toDo-ul");
