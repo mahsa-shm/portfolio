@@ -600,6 +600,7 @@ progress::-webkit-progress-bar {
   .additional-temp {
     margin-left: -7px !important;
     font-size: 4vw !important;
+    overflow: hidden;
   }
   #invalid-city {
     margin-left: 100px !important;
